@@ -1,5 +1,14 @@
 # Changelog
 
+## [8.3.0] — 2026-08-14
+
+### Changed
+
+- Bumped JUnit Jupiter test dependency 5.12.2 → 5.14.4.
+- Bumped CI actions: `actions/checkout` v4 → v7, `actions/setup-java` v4 → v5.
+- README quickstart now uses an explicit regional target (`ScaniiTarget.US1`); the
+  regional endpoints table marks AUTO as deprecated.
+
 ## [8.2.0] — 2026-05-05
 
 ### Deprecated
