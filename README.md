@@ -44,6 +44,7 @@ System.out.printf("findings: %s%n", result.getFindings());
 | `processFromUrl(URI location)` | Synchronous remote-URL scan |
 | `processFromUrl(URI location, Map<String,String> metadata)` | Remote-URL scan with metadata |
 | `retrieve(String id)` | Retrieve previous scan result |
+| `delete(String id)` | Hard-delete a previous scan result and its trace |
 | `retrieveTrace(String id)` | Retrieve ordered processing events for a result (preview) |
 | `fetch(String location)` | Server-side async fetch-and-scan of a remote URL |
 | `ping()` | Health check |

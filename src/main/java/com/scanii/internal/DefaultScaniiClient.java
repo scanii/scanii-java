@@ -188,6 +188,21 @@ public class DefaultScaniiClient implements ScaniiClient {
   }
 
   @Override
+  public boolean delete(String id) {
+    Objects.requireNonNull(id, "resource id cannot be null");
+
+    HttpRequest req = newRequestBuilder(target.resolve("/v2.2/files/" + id))
+      .DELETE()
+      .build();
+    HttpResponse<String> response = send(req);
+
+    if (response.statusCode() != 204) {
+      parseAndThrowError(response);
+    }
+    return true;
+  }
+
+  @Override
   public Optional<ScaniiTraceResult> retrieveTrace(String id) {
     Objects.requireNonNull(id, "resource id cannot be null");
 

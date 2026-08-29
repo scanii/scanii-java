@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.4.0] — 2026-08-29
+
+### Added
+
+- `delete(String id)` — hard-deletes a previously processed file and its trace
+  (`DELETE /v2.2/files/{id}`). Returns `true` on success.
+
 ## [8.3.0] — 2026-08-14
 
 ### Changed

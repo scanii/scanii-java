@@ -133,6 +133,15 @@ public interface ScaniiClient {
   Optional<ScaniiProcessingResult> retrieve(String id);
 
   /**
+   * Hard-deletes a previously processed file and its trace.
+   *
+   * @param id id of the previously processed content
+   * @return true when the resource was deleted
+   * @see <a href="https://scanii.github.io/openapi/v22/">spec</a>
+   */
+  boolean delete(String id);
+
+  /**
    * Retrieves the processing trace for a previously processed file.
    * Returns an ordered list of events describing each stage of the processing pipeline.
    *
