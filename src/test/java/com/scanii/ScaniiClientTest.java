@@ -215,6 +215,11 @@ class ScaniiClientTest extends IntegrationTest {
   }
 
   @Test
+  void testDeleteUnknownId() {
+    assertThrows(ScaniiException.class, () -> client.delete("doesnotexist"));
+  }
+
+  @Test
   void testProcessFromUrl() throws Exception {
     // scanii-cli serves the EICAR file at this well-known path
     ScaniiProcessingResult result = client.processFromUrl(URI.create(ENDPOINT + "/static/eicar.txt"));
