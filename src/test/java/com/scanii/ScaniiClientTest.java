@@ -211,12 +211,19 @@ class ScaniiClientTest extends IntegrationTest {
 
     assertTrue(client.delete(processed.getResourceId()));
     assertTrue(client.retrieve(processed.getResourceId()).isEmpty());
+    assertTrue(client.retrieveTrace(processed.getResourceId()).isPresent());
+    assertTrue(client.deleteTrace(processed.getResourceId()));
     assertTrue(client.retrieveTrace(processed.getResourceId()).isEmpty());
   }
 
   @Test
   void testDeleteUnknownId() {
     assertThrows(ScaniiException.class, () -> client.delete("doesnotexist"));
+  }
+
+  @Test
+  void testDeleteTraceUnknownId() {
+    assertThrows(ScaniiException.class, () -> client.deleteTrace("doesnotexist"));
   }
 
   @Test

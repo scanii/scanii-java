@@ -4,8 +4,10 @@
 
 ### Added
 
-- `delete(String id)` — hard-deletes a previously processed file and its trace
-  (`DELETE /v2.2/files/{id}`). Returns `true` on success.
+- `delete(String id)` — deletes a previously processed file
+  (`DELETE /v2.2/files/{id}`). Returns `true` on success; its trace is unaffected.
+- `deleteTrace(String id)` — deletes the processing trace separately
+  (`DELETE /v2.2/files/{id}/trace`). Returns `true` on success.
 
 ## [8.3.0] — 2026-08-14
 
