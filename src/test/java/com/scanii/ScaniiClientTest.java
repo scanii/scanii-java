@@ -205,6 +205,28 @@ class ScaniiClientTest extends IntegrationTest {
   }
 
   @Test
+  void testDelete() throws Exception {
+    ScaniiProcessingResult processed = client.process(Systems.randomFile(1024));
+    assertNotNull(processed.getResourceId());
+
+    assertTrue(client.delete(processed.getResourceId()));
+    assertTrue(client.retrieve(processed.getResourceId()).isEmpty());
+    assertTrue(client.retrieveTrace(processed.getResourceId()).isPresent());
+    assertTrue(client.deleteTrace(processed.getResourceId()));
+    assertTrue(client.retrieveTrace(processed.getResourceId()).isEmpty());
+  }
+
+  @Test
+  void testDeleteUnknownId() {
+    assertThrows(ScaniiException.class, () -> client.delete("doesnotexist"));
+  }
+
+  @Test
+  void testDeleteTraceUnknownId() {
+    assertThrows(ScaniiException.class, () -> client.deleteTrace("doesnotexist"));
+  }
+
+  @Test
   void testProcessFromUrl() throws Exception {
     // scanii-cli serves the EICAR file at this well-known path
     ScaniiProcessingResult result = client.processFromUrl(URI.create(ENDPOINT + "/static/eicar.txt"));
