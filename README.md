@@ -14,7 +14,7 @@ Official Java SDK for the [Scanii](https://www.scanii.com) content processing AP
 <dependency>
   <groupId>com.scanii</groupId>
   <artifactId>scanii-java</artifactId>
-  <version>8.3.0</version>
+  <version>8.4.0</version>
 </dependency>
 ```
 
