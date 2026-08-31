@@ -46,7 +46,7 @@ System.out.printf("findings: %s%n", result.getFindings());
 | `retrieve(String id)` | Retrieve previous scan result |
 | `delete(String id)` | Delete a previous scan result |
 | `deleteTrace(String id)` | Delete the processing trace for a previous scan result |
-| `retrieveTrace(String id)` | Retrieve ordered processing events for a result (preview) |
+| `retrieveTrace(String id)` | Retrieve ordered processing events for a result |
 | `fetch(String location)` | Server-side async fetch-and-scan of a remote URL |
 | `ping()` | Health check |
 | `createAuthToken(int timeout, TimeUnit unit)` | Mint short-lived auth token |

@@ -154,9 +154,6 @@ public interface ScaniiClient {
    * Retrieves the processing trace for a previously processed file.
    * Returns an ordered list of events describing each stage of the processing pipeline.
    *
-   * <p><strong>Preview:</strong> the trace endpoint is marked preview in the v2.2 spec —
-   * the API surface may shift before it is marked stable.
-   *
    * @param id id of the previously processed content
    * @return optional {@link ScaniiTraceResult}, empty if the id is not found
    * @see <a href="https://scanii.github.io/openapi/v22/">spec</a>

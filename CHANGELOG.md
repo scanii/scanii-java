@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+
+- Dropped the "preview" designation from `retrieveTrace` and `ScaniiTraceResult`.
+  The trace endpoint is no longer marked preview in the v2.2 contract; the method
+  itself is unchanged.
+
 ## [8.4.0] — 2026-08-29
 
 ### Added
