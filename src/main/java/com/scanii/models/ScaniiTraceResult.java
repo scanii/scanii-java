@@ -8,9 +8,6 @@ import java.util.List;
  * Result of a {@link com.scanii.ScaniiClient#retrieveTrace(String)} call,
  * containing an ordered list of processing events for a given processing id.
  *
- * <p><strong>Preview:</strong> the trace endpoint ({@code GET /v2.2/files/{id}/trace})
- * is marked preview in the v2.2 spec — the API surface may shift before it is marked stable.
- *
  * @see <a href="https://scanii.github.io/openapi/v22/">spec</a>
  */
 public class ScaniiTraceResult extends ScaniiResult {
