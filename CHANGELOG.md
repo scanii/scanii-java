@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [8.4.1] — 2026-11-21
+
 ### Changed
 
 - Dropped the "preview" designation from `retrieveTrace` and `ScaniiTraceResult`.
