@@ -7,6 +7,7 @@
 - Dropped the "preview" designation from `retrieveTrace` and `ScaniiTraceResult`.
   The trace endpoint is no longer marked preview in the v2.2 contract; the method
   itself is unchanged.
+- The README's Maven snippet shows the current version, 8.4.0 (#118).
 
 ## [8.4.0] — 2026-08-29
 
